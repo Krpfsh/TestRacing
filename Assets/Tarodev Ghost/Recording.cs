@@ -54,8 +54,7 @@ namespace TarodevGhost {
         #region Used For Playback
 
         public Pose EvaluatePoint(float elapsed) => new Pose(
-            new Vector3(_posXCurve.Evaluate(elapsed), _posYCurve.Evaluate(elapsed), _posZCurve.Evaluate(elapsed)),
-            Quaternion.Euler(_rotXCurve.Evaluate(elapsed), _rotYCurve.Evaluate(elapsed), _rotZCurve.Evaluate(elapsed)));
+            new Vector3(_posXCurve.Evaluate(elapsed), 0f, _posZCurve.Evaluate(elapsed)), Quaternion.Euler(_rotXCurve.Evaluate(elapsed), _rotYCurve.Evaluate(elapsed), _rotZCurve.Evaluate(elapsed)));
 
         #endregion
 
