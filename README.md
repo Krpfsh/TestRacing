@@ -1,0 +1,6 @@
+![Скриншот 19-11-2024 06 53 56](https://github.com/user-attachments/assets/ae76eb4f-706b-4dbc-8c0c-330db64ed6d7)
+![Скриншот 19-11-2024 06 56 19](https://github.com/user-attachments/assets/61e80fd0-407d-40c1-a980-ba9340a23618)
+![Скриншот 19-11-2024 06 54 26](https://github.com/user-attachments/assets/e11584c3-f329-4c3c-b38f-4c775e967313)
+![Скриншот 19-11-2024 06 54 05](https://github.com/user-attachments/assets/7db0a4d8-8582-4a60-a89d-9b29086fefb9)
+![Скриншот 19-11-2024 06 54 41](https://github.com/user-attachments/assets/81b0d771-831b-4db0-98a5-4a5e01553339)
+![Безымянный](https://github.com/user-attachments/assets/70160401-d44c-442c-944d-aeca9c79006e)
