@@ -58,10 +58,10 @@ namespace Ashsvp
             set
             {
                 currentGearTemp = value;
-
                 if (vehicleController.accelerationInput > 0 && vehicleController.localVehicleVelocity.z > 0 && !AudioSystem.GearSound.isPlaying && vehicleController.vehicleIsGrounded)
                 {
                     vehicleController.VehicleEvents.OnGearChange.Invoke();
+
                     AudioSystem.GearSound.Play();
                     StartCoroutine(shiftingGear());
                 }

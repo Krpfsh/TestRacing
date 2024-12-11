@@ -15,11 +15,25 @@ namespace Ashsvp
         private GearSystem gearSystem;
 
         private SimcadeVehicleController SimcadeVehicleController;
+        private float volumeSound;
 
+        private void Awake()
+        {
+            if(PlayerPrefs.GetFloat("VolumeSound", 1f) == 0)
+            {
+                engineSound.enabled = false;
+                GearSound.enabled = false;
+            }
+            else
+            {
+                engineSound.enabled = true;
+            }
+        }
         private void Start()
         {
             gearSystem = GetComponent<GearSystem>();
             SimcadeVehicleController = GetComponent<SimcadeVehicleController>();
+            volumeSound = PlayerPrefs.GetFloat("VolumeSound", 1f);
         }
 
         private void FixedUpdate()
@@ -43,11 +57,11 @@ namespace Ashsvp
 
             if (Mathf.Abs(SimcadeVehicleController.accelerationInput) > 0.1f)
             {
-                engineSound.volume = Mathf.MoveTowards(engineSound.volume, 1, 0.01f);
+                engineSound.volume = Mathf.MoveTowards(volumeSound, 1, 0f);
             }
             else
             {
-                engineSound.volume = Mathf.MoveTowards(engineSound.volume, 0.5f, 0.01f);
+                engineSound.volume = Mathf.MoveTowards(volumeSound, 0.5f, 0f);
             }
 
 

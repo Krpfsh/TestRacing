@@ -21,15 +21,25 @@ namespace Ashsvp
 		[HideInInspector]
 		public Vector3 skidPoint, normal;
 
-
-		private void Start()
+        private void Start()
 		{
 			smoke.transform.localPosition = Vector3.up * radius;
 			skidSound = GetComponent<AudioSource>();
 			skidSound.mute = true;
 
 			lastFixedUpdateTime = Time.time;
-		}
+
+			//AudioManager
+            if (PlayerPrefs.GetFloat("VolumeSound") == 0)
+            {
+                skidSound.volume = 0f;
+                skidSound.enabled = false;
+            }
+            else
+            {
+                skidSound.volume = PlayerPrefs.GetFloat("VolumeSound");
+            }
+        }
 
 		protected void FixedUpdate()
 		{
